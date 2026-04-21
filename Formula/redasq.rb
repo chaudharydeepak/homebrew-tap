@@ -1,39 +1,39 @@
 class Redasq < Formula
   desc "Local HTTPS MITM proxy that inspects, redacts, or blocks sensitive data sent to AI coding assistants"
   homepage "https://github.com/chaudharydeepak/redasq"
-  version "0.0.1-pre"
+  version "0.0.2-pre"
   license "MIT"
 
   # Bottles are pre-built binaries — no compiler or Xcode CLT required.
   bottle do
-    root_url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.1-pre"
-      sha256 cellar: :any_skip_relocation, aarch64_linux: "722feb5a34e2657323a1926f3239647f94ff4f57a2f08b913dcddd1563ec04d5"
-      sha256 cellar: :any_skip_relocation, arm64_sequoia: "2215b9948e0452e20f282103f888f49ed9e8e019b39412e3f514563242b459ed"
-      sha256 cellar: :any_skip_relocation, arm64_sonoma: "a741e6973b55d229f4e16868c2e0c2c1cbd518e2f42b5093a3b4c266e41216f5"
-      sha256 cellar: :any_skip_relocation, arm64_ventura: "a741e6973b55d229f4e16868c2e0c2c1cbd518e2f42b5093a3b4c266e41216f5"
-      sha256 cellar: :any_skip_relocation, sequoia: "47139bb74c844920336b0b16e0c9ffab8fe267b180ad3920b2fea1f93dcd3f07"
-      sha256 cellar: :any_skip_relocation, sonoma: "e15cd9b3e84bd7549a2fa90aa01d676c3dd873ff7936a87ff9fffe083c17ff8a"
-      sha256 cellar: :any_skip_relocation, ventura: "12609a7ba39daf74b464ce8ae023201858dbcd0d096bca291cd763e56cf2895a"
-      sha256 cellar: :any_skip_relocation, x86_64_linux: "04f147542ebf176d0ef9b94e8e0db132ca7d4157d5e4d736bb0135c7a82fab53"    end
+    root_url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.2-pre"
+      sha256 cellar: :any_skip_relocation, aarch64_linux: "e66ec1305569ab4f3346d27e7f526ee302163e489f884c64feb7041f221efc97"
+      sha256 cellar: :any_skip_relocation, arm64_sequoia: "86d5735a90e3b7720e3eb73acdd82ff3699d972828bca3ff759d281892935a76"
+      sha256 cellar: :any_skip_relocation, arm64_sonoma: "205f1f78424b71c1a78e1356d835ab62dda8316c3c6c46a8b0187d5a95752612"
+      sha256 cellar: :any_skip_relocation, arm64_ventura: "bff28f4c3785410d11af68e86e5090c0fffe875cfe622695821e4ea224776391"
+      sha256 cellar: :any_skip_relocation, sequoia: "3202c6d8ee02909ae4ec7ea66ce6ed209846144b2e8bd6e77d8b9acbfd870f39"
+      sha256 cellar: :any_skip_relocation, sonoma: "3202c6d8ee02909ae4ec7ea66ce6ed209846144b2e8bd6e77d8b9acbfd870f39"
+      sha256 cellar: :any_skip_relocation, ventura: "28add3634863e08e3bff4f7b82e83cee0b32f02499a71dc317f90d7cdb8c4f92"
+      sha256 cellar: :any_skip_relocation, x86_64_linux: "67a12fa6eeeed28156b26f082e10601c61d92e840b3af62ce973e7f70a5d2fa5"    end
 
   # Fallback source build for OS versions not covered by a bottle.
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.1-pre/redasq-darwin-arm64.tar.gz"
-      sha256 "ce3b26bdbb527a0da602dbb0f46fd424f68cb0249797c703c4e66f0d2df2b16c"
+      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.2-pre/redasq-darwin-arm64.tar.gz"
+      sha256 "55b16ad450d5380c94a94029774fcef1579d6942dd0af5174f30462e72563803"
     else
-      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.1-pre/redasq-darwin-amd64.tar.gz"
-      sha256 "e244a75b0715d3ce42af8d3529e19c6c994b783f43e43880a962d779655027f5"
+      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.2-pre/redasq-darwin-amd64.tar.gz"
+      sha256 "683400037d5d5bdc91bb56570abc7f7bad204fd5e64886a8d688b4eb1892dc60"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.1-pre/redasq-linux-arm64.tar.gz"
-      sha256 "a9cc2c2d2653e24ed1b87c2118fe36d5952d2bca1c17906d6512cb35ce7f31b7"
+      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.2-pre/redasq-linux-arm64.tar.gz"
+      sha256 "b74982a27791d7fc8223c28d1a204cdf87b9e8517d653859d50eda1536f86508"
     else
-      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.1-pre/redasq-linux-amd64.tar.gz"
-      sha256 "3044f30f60bf792b10f8ec21c20fe75b912406d1b733a69e93c32149be523794"
+      url "https://github.com/chaudharydeepak/redasq/releases/download/v0.0.2-pre/redasq-linux-amd64.tar.gz"
+      sha256 "8b803e4ad12788d9789e172e4b4cef89a71ea1c8021614abaa517a2b091666f6"
     end
   end
 
